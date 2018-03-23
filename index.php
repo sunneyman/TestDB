@@ -1,5 +1,5 @@
 <?php
-// Start the session
+// Start session
 session_start();
 $stage = "pass";
 ?>
@@ -122,8 +122,8 @@ else if ($_SERVER["REQUEST_METHOD"] == "POST" && $_SESSION["stage"] == "sendToDB
 
 function Login()
 
-{     $usname = "Alex";
-      $pass = "Alex";
+{     $usname = "1234";
+      $pass = "1234";
       $_SESSION["usname"] = $usname;
       $_SESSION["pass"] = $pass;
  
@@ -156,10 +156,10 @@ function test_input($data) {
 
 function datarecord() {
 
-$servername = "localhost:8889";
-$username = "root";
-$password = "root";
-$dbname = "testerSQL";
+$servername = "1234";
+$username = "1234";
+$password = "1234";
+$dbname = "1234";
 
 
 // Create connection
@@ -240,16 +240,10 @@ if ($_SESSION["stage"] == "input")  { ?>
     <input type="submit" value="Refresh page" style="width: 9em;">
     <input type="hidden" name="stage" value="home"></form></p>
 
-    <!-- <p><form action="index.php">
-    <input type="submit" value="Log out">
-    <input type="hidden" name="stage" value="pass"></form></p> -->
-
     <p><form method="post" action="index.php">
     <input type="submit" value="Log out" style="width: 9em;">
     <input type="hidden" name="stage" value="home"></form></p>
       
-
-
 <?php }
    else if ($_SESSION["stage"] == "sendToDB")  { ?>
           
@@ -297,9 +291,4 @@ if ($_SESSION["stage"] == "input")  { ?>
     ?>
 </div>
 </body>
-</html>
-
-
-
-
-			
+</html>		
